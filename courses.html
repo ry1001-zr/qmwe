@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程列表 - 课程管理系统</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><a href="index.html">课程管理系统</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="courses.html" class="nav-link active">课程列表</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="register.html" class="nav-link">注册</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="courses-page">
+        <!-- 课程筛选区域 -->
+        <section class="course-filter-section">
+            <div class="container">
+                <h2>课程列表</h2>
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label>课程分类：</label>
+                        <select id="category-filter">
+                            <option value="">全部分类</option>
+                            <option value="programming">编程开发</option>
+                            <option value="design">设计创意</option>
+                            <option value="business">商业管理</option>
+                            <option value="language">语言学习</option>
+                            <option value="marketing">市场营销</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>难度等级：</label>
+                        <select id="level-filter">
+                            <option value="">全部等级</option>
+                            <option value="beginner">初级</option>
+                            <option value="intermediate">中级</option>
+                            <option value="advanced">高级</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>价格范围：</label>
+                        <select id="price-filter">
+                            <option value="">全部价格</option>
+                            <option value="free">免费</option>
+                            <option value="0-200">¥0-200</option>
+                            <option value="200-500">¥200-500</option>
+                            <option value="500+">¥500以上</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <input type="text" id="course-search" placeholder="搜索课程名称...">
+                        <button class="search-btn">搜索</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 课程列表 -->
+        <section class="course-list-section">
+            <div class="container">
+                <div class="courses-grid" id="course-grid">
+                    <!-- 课程卡片将通过JavaScript动态生成 -->
+                </div>
+                <!-- 加载更多按钮 -->
+                <div class="load-more-container">
+                    <button id="load-more-btn" class="btn btn-primary">加载更多</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 无结果提示 -->
+        <div id="no-results" class="no-results" style="display: none;">
+            <p>没有找到符合条件的课程，请尝试其他筛选条件。</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 课程管理系统. 保留所有权利.</p>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">联系方式</a>
+                <a href="#">隐私政策</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/course-filter.js"></script>
+</body>
+</html>

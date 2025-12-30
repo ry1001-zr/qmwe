@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程详情 - 课程管理系统</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><a href="index.html">课程管理系统</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="courses.html" class="nav-link">课程列表</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="register.html" class="nav-link">注册</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="course-detail-page">
+        <!-- 面包屑导航 -->
+        <nav class="breadcrumb">
+            <div class="container">
+                <a href="index.html">首页</a> >
+                <a href="courses.html">课程列表</a> >
+                <span id="current-course-name">课程详情</span>
+            </div>
+        </nav>
+
+        <!-- 课程头部信息 -->
+        <section class="course-header">
+            <div class="container">
+                <div class="course-header-content">
+                    <div class="course-image-section">
+                        <img id="course-main-image" src="images/course-default.jpg" alt="课程图片" class="main-course-image">
+                        <div class="course-gallery">
+                            <img src="images/course-thumb1.jpg" alt="缩略图1" class="thumb active">
+                            <img src="images/course-thumb2.jpg" alt="缩略图2" class="thumb">
+                            <img src="images/course-thumb3.jpg" alt="缩略图3" class="thumb">
+                        </div>
+                    </div>
+                    <div class="course-info-section">
+                        <h1 id="course-title" class="course-title">Web前端开发完整教程</h1>
+                        <div class="course-meta">
+                            <span class="instructor">讲师：张老师</span>
+                            <span class="category">分类：编程开发</span>
+                            <span class="level">难度：中级</span>
+                            <span class="duration">48课时</span>
+                        </div>
+                        <div class="course-rating">
+                            <div class="stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <span class="rating-score">4.0</span>
+                            <span class="review-count">(256条评价)</span>
+                        </div>
+                        <p id="course-description" class="course-intro">
+                            本课程将带你从零开始学习Web前端开发，涵盖HTML、CSS、JavaScript等核心技术，通过实战项目帮助你快速掌握前端开发技能。
+                        </p>
+                        <div class="course-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">响应式设计</span>
+                        </div>
+                        <div class="course-purchase">
+                            <div class="price-section">
+                                <span class="current-price">¥299</span>
+                                <span class="original-price">¥599</span>
+                                <span class="discount">限时5折</span>
+                            </div>
+                            <button class="btn btn-primary btn-large">立即购买</button>
+                            <button class="btn btn-secondary btn-large">加入收藏</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 课程详情标签页 -->
+        <section class="course-detail-tabs">
+            <div class="container">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="overview">课程概述</button>
+                    <button class="tab-btn" data-tab="curriculum">课程大纲</button>
+                    <button class="tab-btn" data-tab="instructor">讲师介绍</button>
+                    <button class="tab-btn" data-tab="reviews">学员评价</button>
+                </div>
+                <div class="tabs-content">
+                    <!-- 课程概述 -->
+                    <div id="overview" class="tab-content active">
+                        <h3>你将学到什么</h3>
+                        <ul class="learning-points">
+                            <li>掌握HTML5语义化标签和页面结构</li>
+                            <li>熟练使用CSS3进行页面布局和样式设计</li>
+                            <li>理解JavaScript编程基础和DOM操作</li>
+                            <li>学会响应式设计和移动端适配</li>
+                            <li>能够独立完成前端项目开发</li>
+                        </ul>
+                        <h3>课程要求</h3>
+                        <ul class="requirements">
+                            <li>对Web开发有基础了解</li>
+                            <li>准备一台可以上网的电脑</li>
+                            <li>安装代码编辑器(推荐VS Code)</li>
+                            <li>保持学习的热情和耐心</li>
+                        </ul>
+                    </div>
+                    <!-- 课程大纲 -->
+                    <div id="curriculum" class="tab-content">
+                        <h3>第一章：HTML基础入门</h3>
+                        <ul class="chapter-list">
+                            <li class="lesson-item">
+                                <span class="lesson-title">1.1 HTML概述和开发环境搭建</span>
+                                <span class="lesson-duration">30分钟</span>
+                            </li>
+                            <li class="lesson-item">
+                                <span class="lesson-title">1.2 HTML基本标签</span>
+                                <span class="lesson-duration">45分钟</span>
+                            </li>
+                            <li class="lesson-item">
+                                <span class="lesson-title">1.3 表单与输入元素</span>
+                                <span class="lesson-duration">40分钟</span>
+                            </li>
+                        </ul>
+                        <h3>第二章：CSS样式设计</h3>
+                        <ul class="chapter-list">
+                            <li class="lesson-item">
+                                <span class="lesson-title">2.1 CSS基础语法和选择器</span>
+                                <span class="lesson-duration">35分钟</span>
+                            </li>
+                            <li class="lesson-item">
+                                <span class="lesson-title">2.2 盒模型和布局基础</span>
+                                <span class="lesson-duration">50分钟</span>
+                            </li>
+                            <li class="lesson-item">
+                                <span class="lesson-title">2.3 Flexbox布局和Grid布局</span>
+                                <span class="lesson-duration">60分钟</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 讲师介绍 -->
+                    <div id="instructor" class="tab-content">
+                        <div class="instructor-card">
+                            <img src="images/instructor-zhang.jpg" alt="张老师" class="instructor-avatar">
+                            <div class="instructor-info">
+                                <h3>张老师</h3>
+                                <p class="instructor-title">高级前端开发工程师</p>
+                                <p class="instructor-bio">
+                                    拥有8年前端开发经验，曾在多家知名互联网公司担任技术负责人。精通各种前端技术栈，善于将复杂的技术概念简单化，让初学者也能轻松掌握。
+                                </p>
+                                <div class="instructor-stats">
+                                    <div class="stat"><span class="number">15630</span> <span class="label">名学生</span></div>
+                                    <div class="stat"><span class="number">12</span> <span class="label">门课程</span></div>
+                                    <div class="stat"><span class="number">4.8</span> <span class="label">平均分</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 学员评价 -->
+                    <div id="reviews" class="tab-content">
+                        <div class="reviews-summary">
+                            <div class="rating-distribution">
+                                <h4>评分分布</h4>
+                                <!-- 评分分布图表 -->
+                                <div class="rating-bars">
+                                    <div class="rating-bar-row">
+                                        <span>5星</span>
+                                        <div class="bar"><div class="fill" style="width: 60%"></div></div>
+                                        <span>60%</span>
+                                    </div>
+                                    <div class="rating-bar-row">
+                                        <span>4星</span>
+                                        <div class="bar"><div class="fill" style="width: 25%"></div></div>
+                                        <span>25%</span>
+                                    </div>
+                                    <!-- 更多星级... -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-list" id="reviews-container">
+                            <!-- 评价将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关课程推荐 -->
+        <section class="related-courses">
+            <div class="container">
+                <h3>相关课程推荐</h3>
+                <div class="courses-grid" id="related-courses-grid">
+                    <!-- 相关课程将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 课程管理系统. 保留所有权利.</p>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">联系方式</a>
+                <a href="#">隐私政策</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/course-detail.js"></script>
+</body>
+</html>

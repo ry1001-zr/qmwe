@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册 - 课程管理系统</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><a href="index.html">课程管理系统</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="courses.html" class="nav-link">课程列表</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="register.html" class="nav-link active">注册</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 注册页面主体 -->
+    <main class="register-page">
+        <section class="register-section">
+            <div class="container">
+                <div class="register-wrapper">
+                    <!-- 注册表单 -->
+                    <div class="register-form-container">
+                        <h2 class="form-title">创建新账户</h2>
+                        <p class="form-subtitle">加入我们，开始你的学习之旅</p>
+
+                        <form id="register-form" class="register-form">
+                            <!-- 用户名 -->
+                            <div class="form-group">
+                                <label for="username">用户名 *</label>
+                                <input type="text" id="username" name="username" required
+                                       placeholder="请输入用户名（3-20个字符）"
+                                       data-error="用户名不符合要求">
+                                <span class="error-message"></span>
+                            </div>
+
+                            <!-- 邮箱 -->
+                            <div class="form-group">
+                                <label for="email">邮箱地址 *</label>
+                                <input type="email" id="email" name="email" required
+                                       placeholder="请输入有效的邮箱地址"
+                                       data-error="请输入有效的邮箱地址">
+                                <span class="error-message"></span>
+                            </div>
+
+                            <!-- 手机号 -->
+                            <div class="form-group">
+                                <label for="phone">手机号码 *</label>
+                                <input type="tel" id="phone" name="phone" required
+                                       placeholder="请输入11位手机号码"
+                                       data-error="请输入有效的手机号码">
+                                <span class="error-message"></span>
+                            </div>
+
+                            <!-- 密码 -->
+                            <div class="form-group">
+                                <label for="password">设置密码 *</label>
+                                <div class="password-wrapper">
+                                    <input type="password" id="password" name="password" required
+                                           placeholder="请设置密码（至少8位，包含字母和数字）"
+                                           data-error="密码强度不够">
+                                    <button type="button" class="toggle-password">👁</button>
+                                </div>
+                                <div class="password-strength">
+                                    <span class="strength-bar"></span>
+                                    <span class="strength-text">密码强度：</span>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <!-- 确认密码 -->
+                            <div class="form-group">
+                                <label for="confirm-password">确认密码 *</label>
+                                <div class="password-wrapper">
+                                    <input type="password" id="confirm-password" name="confirm-password" required
+                                           placeholder="请再次输入密码"
+                                           data-error="两次密码输入不一致">
+                                    <button type="button" class="toggle-password">👁</button>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <!-- 昵称 -->
+                            <div class="form-group">
+                                <label for="nickname">昵称</label>
+                                <input type="text" id="nickname" name="nickname"
+                                       placeholder="请输入昵称（可选）">
+                                <span class="error-message"></span>
+                            </div>
+
+                            <!-- 兴趣领域 -->
+                            <div class="form-group">
+                                <label>兴趣领域（可多选）</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="programming">
+                                        <span>编程开发</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="design">
+                                        <span>设计创意</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="business">
+                                        <span>商业管理</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="language">
+                                        <span>语言学习</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="marketing">
+                                        <span>市场营销</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 验证码 -->
+                            <div class="form-group">
+                                <label for="captcha">验证码 *</label>
+                                <div class="captcha-group">
+                                    <input type="text" id="captcha" name="captcha" required
+                                           placeholder="请输入验证码"
+                                           data-error="验证码错误">
+                                    <img id="captcha-image" src="images/captcha.jpg" alt="验证码" class="captcha-image">
+                                    <button type="button" id="refresh-captcha" class="refresh-captcha">刷新</button>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <!-- 协议同意 -->
+                            <div class="form-group checkbox-group">
+                                <label class="agreement-item">
+                                    <input type="checkbox" id="agreement" name="agreement" required
+                                           data-error="请同意用户协议">
+                                    <span>我已阅读并同意 <a href="#" target="_blank">《用户协议》</a> 和 <a href="#" target="_blank">《隐私政策》</a></span>
+                                </label>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <!-- 提交按钮 -->
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span class="btn-text">立即注册</span>
+                                <span class="loading-spinner" style="display: none;">⏳</span>
+                            </button>
+                        </form>
+
+                        <!-- 表单成功提示 -->
+                        <div id="success-message" class="success-message" style="display: none;">
+                            <h3>🎉 注册成功！</h3>
+                            <p>欢迎加入我们！我们将在3秒后自动跳转到登录页面...</p>
+                        </div>
+
+                        <!-- 登录链接 -->
+                        <div class="login-link">
+                            <p>已有账户？<a href="#">立即登录</a></p>
+                        </div>
+                    </div>
+
+                    <!-- 注册页右侧信息 -->
+                    <div class="register-info">
+                        <h3>为什么选择我们？</h3>
+                        <ul class="benefits-list">
+                            <li><span class="icon">✓</span> 海量优质课程资源</li>
+                            <li><span class="icon">✓</span> 专业讲师在线答疑</li>
+                            <li><span class="icon">✓</span> 学习进度实时跟踪</li>
+                            <li><span class="icon">✓</span> 随时随地移动学习</li>
+                            <li><span class="icon">✓</span> 完成证书认证</li>
+                            <li><span class="icon">✓</span> 7x24小时技术支持</li>
+                        </ul>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number">10,000+</span>
+                                <span class="stat-label">注册学员</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">精品课程</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">4.9</span>
+                                <span class="stat-label">用户评分</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 课程管理系统. 保留所有权利.</p>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">联系方式</a>
+                <a href="#">隐私政策</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>

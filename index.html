@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程管理系统 - 首页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/default-images.css"> <!-- 默认图片占位 -->
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>课程管理系统</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="courses.html" class="nav-link">课程列表</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="register.html" class="nav-link">注册</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 轮播图区域 -->
+        <section class="hero-carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="images/course1.jpg" alt="精品课程">
+                    <div class="carousel-content">
+                        <h2>精品课程推荐</h2>
+                        <p>发现最适合你的学习内容</p>
+                        <a href="courses.html" class="btn btn-primary">查看课程</a>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/course2.jpg" alt="在线学习">
+                    <div class="carousel-content">
+                        <h2>在线学习平台</h2>
+                        <p>随时随地，轻松学习</p>
+                        <a href="courses.html" class="btn btn-primary">开始学习</a>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/course3.jpg" alt="专业认证">
+                    <div class="carousel-content">
+                        <h2>专业认证课程</h2>
+                        <p>提升技能，获得认证</p>
+                        <a href="courses.html" class="btn btn-primary">了解更多</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn prev">&lt;</button>
+                <button class="carousel-btn next">&gt;</button>
+            </div>
+            <div class="carousel-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+            </div>
+        </section>
+
+        <!-- 特色课程展示 -->
+        <section class="featured-courses">
+            <div class="container">
+                <h2 class="section-title">热门课程</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <img src="images/web-dev.jpg" alt="Web开发" class="course-image">
+                        <div class="course-info">
+                            <h3>Web前端开发</h3>
+                            <p>从零开始学习HTML、CSS和JavaScript</p>
+                            <div class="course-meta">
+                                <span class="duration">48课时</span>
+                                <span class="price">¥299</span>
+                            </div>
+                            <a href="course-detail.html?id=web-dev" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/python.jpg" alt="Python编程" class="course-image">
+                        <div class="course-info">
+                            <h3>Python编程基础</h3>
+                            <p>简单易学，适合编程初学者</p>
+                            <div class="course-meta">
+                                <span class="duration">36课时</span>
+                                <span class="price">¥199</span>
+                            </div>
+                            <a href="course-detail.html?id=python" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/design.jpg" alt="UI设计" class="course-image">
+                        <div class="course-info">
+                            <h3>UI设计入门</h3>
+                            <p>掌握基本的设计原理和工具使用</p>
+                            <div class="course-meta">
+                                <span class="duration">24课时</span>
+                                <span class="price">¥399</span>
+                            </div>
+                            <a href="course-detail.html?id=ui-design" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 统计数据展示 -->
+        <section class="statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3 class="stat-number">1000+</h3>
+                        <p class="stat-label">注册学员</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">50+</h3>
+                        <p class="stat-label">优质课程</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">20+</h3>
+                        <p class="stat-label">专业讲师</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">95%</h3>
+                        <p class="stat-label">满意度</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 课程管理系统. 保留所有权利.</p>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">联系方式</a>
+                <a href="#">隐私政策</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+</body>
+</html>
